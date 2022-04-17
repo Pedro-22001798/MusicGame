@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411447410}
   - component: {fileID: 411447411}
+  - component: {fileID: 411447412}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -206,6 +207,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &411447412
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411447409}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,18 +259,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23cdc5255e19e146a8a92d850136e20, type: 3}
+  m_Script: {fileID: 11500000, guid: f2fe7107a0bedd24e99fa17d48a9acbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Note:
-  - {fileID: 1125327688}
-  - {fileID: 605604716}
-  - {fileID: 888100641}
-  _Time: 10
-  rb:
-  - {fileID: 1125327692}
-  - {fileID: 605604720}
-  - {fileID: 888100645}
+  buttons:
+  - {fileID: 1049332031}
+  - {fileID: 411447409}
+  - {fileID: 1095399193}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -322,9 +334,10 @@ GameObject:
   - component: {fileID: 605604717}
   - component: {fileID: 605604719}
   - component: {fileID: 605604720}
+  - component: {fileID: 605604718}
   m_Layer: 0
   m_Name: Note (1)
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,6 +356,22 @@ Transform:
   m_Father: {fileID: 2029408285}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &605604718
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605604716}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!212 &605604719
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -427,9 +456,10 @@ GameObject:
   - component: {fileID: 888100642}
   - component: {fileID: 888100644}
   - component: {fileID: 888100645}
+  - component: {fileID: 888100643}
   m_Layer: 0
   m_Name: Note (2)
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,6 +478,22 @@ Transform:
   m_Father: {fileID: 2029408285}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &888100643
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888100641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!212 &888100644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -531,6 +577,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1049332032}
   - component: {fileID: 1049332033}
+  - component: {fileID: 1049332035}
+  - component: {fileID: 1049332034}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -604,6 +652,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1049332034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049332031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5025832ad3c7a4fa253e280f5cb4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1049332035
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049332031}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1095399193
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095399194}
   - component: {fileID: 1095399195}
+  - component: {fileID: 1095399196}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -687,6 +764,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1095399196
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095399193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1125327688
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,9 +791,10 @@ GameObject:
   - component: {fileID: 1125327689}
   - component: {fileID: 1125327691}
   - component: {fileID: 1125327692}
+  - component: {fileID: 1125327690}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,6 +813,22 @@ Transform:
   m_Father: {fileID: 2029408285}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1125327690
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125327688}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!212 &1125327691
 SpriteRenderer:
   m_ObjectHideFlags: 0
