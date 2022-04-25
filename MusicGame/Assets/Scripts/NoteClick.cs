@@ -19,6 +19,11 @@ public class NoteClick : MonoBehaviour
 
     private static int points;
     [SerializeField] private Text pointsText;
+    public ParticleSystem particleG;
+    public ParticleSystem particleH;
+    public ParticleSystem particleJ;
+
+
 
     //[SerializeField] private ParticleSystem hitParticles;
 
@@ -49,6 +54,7 @@ public class NoteClick : MonoBehaviour
             {
                 Destroy(DetectCollG.gNote());
                 ++points;
+                particleG.Play();
             }
         }
         else
@@ -66,6 +72,7 @@ public class NoteClick : MonoBehaviour
             {
                 Destroy(DetectCollH.hNote());
                 ++points;
+                particleH.Play();
             }
         }
         else
@@ -83,6 +90,7 @@ public class NoteClick : MonoBehaviour
             {
                 Destroy(DetectCollJ.jNote());
                 ++points;
+                particleJ.Play();
             }
         }
         else
