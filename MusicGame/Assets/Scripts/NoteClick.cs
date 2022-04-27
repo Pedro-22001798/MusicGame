@@ -42,6 +42,11 @@ void Start()
         hColl = DetectCollH.CheckHColl();
         jColl = DetectCollJ.CheckJColl();
 
+        if(state == ButtonState.WAITING)
+        {
+            personagem.transform.position = new Vector3(9.18f, -3.34f, 0);
+        }
+
         if(points < 0)
         {
             points = 0;
