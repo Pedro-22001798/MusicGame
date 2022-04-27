@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NoteClick : MonoBehaviour
 {
+    private enum ButtonState { G, H, J, WAITING };
     [SerializeField] private GameObject[] buttons;
     private Color pressedNote;
     private Color normalNote;
@@ -24,10 +25,11 @@ public class NoteClick : MonoBehaviour
     public ParticleSystem particleJ;
 
     [SerializeField] private GameObject personagem;
-
     //[SerializeField] private ParticleSystem hitParticles;
 
-    void Start()
+    private ButtonState state = ButtonState.WAITING;
+
+void Start()
     {
         normalNote = new Color(255, 255, 255);
         pressedNote = new Color(0, 0, 0);
@@ -44,57 +46,71 @@ public class NoteClick : MonoBehaviour
         {
             points = 0;
         }
-
         if (Input.GetButton("g"))
         {
-            personagem.transform.position = new Vector3(-4.4f, -3.34f, 0);
-            buttons[0].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
-            gValue = true;
-            if(gColl == true)
+            if (state == ButtonState.WAITING)
             {
-                Destroy(DetectCollG.gNote());
-                ++points;
-                particleG.Play();
+                state = ButtonState.G;
+                personagem.transform.position = new Vector3(-4.4f, -3.34f, 0);
+                buttons[0].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
+                gValue = true;
+                if (gColl == true)
+                {
+                    Destroy(DetectCollG.gNote());
+                    ++points;
+                    particleG.Play();
+                }
             }
         }
         else
         {
+            state = ButtonState.WAITING;
             buttons[0].GetComponent<Renderer>().material.SetColor("_Color", normalNote);
             gValue = false;
         }
 
         if (Input.GetButton("h"))
         {
-            personagem.transform.position = new Vector3(1.69f, -3.34f, 0);
-            buttons[1].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
-            hValue = true;
-            if (hColl == true)
+            if (state == ButtonState.WAITING)
             {
-                Destroy(DetectCollH.hNote());
-                ++points;
-                particleH.Play();
+                state = ButtonState.H;
+                personagem.transform.position = new Vector3(1.69f, -3.34f, 0);
+                buttons[1].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
+                hValue = true;
+                if (hColl == true)
+                {
+                    Destroy(DetectCollH.hNote());
+                    ++points;
+                    particleH.Play();
+                }
             }
         }
         else
         {
+            state = ButtonState.WAITING;
             buttons[1].GetComponent<Renderer>().material.SetColor("_Color", normalNote);
             hValue = false;
         }
 
         if (Input.GetButton("j"))
         {
-            personagem.transform.position = new Vector3(7.62f, -3.34f, 0);
-            buttons[2].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
-            jValue = true;
-            if (jColl == true)
+            if (state == ButtonState.WAITING)
             {
-                Destroy(DetectCollJ.jNote());
-                ++points;
-                particleJ.Play();
+                state = ButtonState.J;
+                personagem.transform.position = new Vector3(7.62f, -3.34f, 0);
+                buttons[2].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
+                jValue = true;
+                if (jColl == true)
+                {
+                    Destroy(DetectCollJ.jNote());
+                    ++points;
+                    particleJ.Play();
+                }
             }
         }
         else
         {
+            state = ButtonState.WAITING;
             buttons[2].GetComponent<Renderer>().material.SetColor("_Color", normalNote);
             jValue = false;
         }
