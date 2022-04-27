@@ -84,18 +84,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-    "com.unity.burst": {
-      "version": "1.5.6",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.1"
-      },
-      "url": "https://packages.unity.com"
-    },
-=======
->>>>>>> d63c0646345de0e5622974b8a5eab710de98d30b
     "com.unity.collab-proxy": {
       "version": "1.9.0",
       "depth": 0,
