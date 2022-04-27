@@ -20,6 +20,7 @@ public class NoteClick : MonoBehaviour
 
     private static int points;
     [SerializeField] private Text pointsText;
+    [SerializeField] private Text pointsText2;
     public ParticleSystem particleG;
     public ParticleSystem particleH;
     public ParticleSystem particleJ;
@@ -120,6 +121,7 @@ void Start()
             jValue = false;
         }
         pointsText.text = points.ToString("0");
+        pointsText2.text = points.ToString("0");
     }
 
     public static bool returngValue()

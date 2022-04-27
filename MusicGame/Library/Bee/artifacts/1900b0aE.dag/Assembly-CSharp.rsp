@@ -348,7 +348,7 @@
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/NoteClick.cs"
 "Assets/Scripts/NoteSpeed.cs"
-"Assets/Scripts/Points.cs"
+"Assets/Scripts/SoundManager.cs"
 -langversion:8.0
 
 /deterministic
