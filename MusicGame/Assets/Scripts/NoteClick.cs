@@ -23,6 +23,8 @@ public class NoteClick : MonoBehaviour
     public ParticleSystem particleH;
     public ParticleSystem particleJ;
 
+    [SerializeField] private GameObject personagem;
+
     //[SerializeField] private ParticleSystem hitParticles;
 
     void Start()
@@ -45,7 +47,7 @@ public class NoteClick : MonoBehaviour
 
         if (Input.GetButton("g"))
         {
-            
+            personagem.transform.position = new Vector3(-4.4f, -3.34f, 0);
             buttons[0].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
             gValue = true;
             if(gColl == true)
@@ -63,7 +65,7 @@ public class NoteClick : MonoBehaviour
 
         if (Input.GetButton("h"))
         {
-            
+            personagem.transform.position = new Vector3(1.69f, -3.34f, 0);
             buttons[1].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
             hValue = true;
             if (hColl == true)
@@ -81,7 +83,7 @@ public class NoteClick : MonoBehaviour
 
         if (Input.GetButton("j"))
         {
-            
+            personagem.transform.position = new Vector3(7.62f, -3.34f, 0);
             buttons[2].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
             jValue = true;
             if (jColl == true)
