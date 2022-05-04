@@ -36,13 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\DetectCollJ.cs" />
      <Compile Include="Assets\Scripts\DetectLossPoints.cs" />
      <Compile Include="Assets\Scripts\DetectCollG.cs" />
-     <Compile Include="Assets\Scripts\Points.cs" />
+     <Compile Include="Assets\Scripts\Music\MusicManager.cs" />
+     <Compile Include="Assets\Scripts\Dificuldade.cs" />
      <Compile Include="Assets\Scripts\DetectCollH.cs" />
      <Compile Include="Assets\Scripts\NoteSpeed.cs" />
      <Compile Include="Assets\Scripts\NoteClick.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

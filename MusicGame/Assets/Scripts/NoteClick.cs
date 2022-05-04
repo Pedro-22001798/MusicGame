@@ -8,6 +8,7 @@ public class NoteClick : MonoBehaviour
     private enum ButtonState { G, H, J, WAITING };
     [SerializeField] private GameObject[] buttons;
     private Color pressedNote;
+
     private Color normalNote;
 
     private static bool gValue = false;
