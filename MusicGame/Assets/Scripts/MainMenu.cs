@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static bool optionsClicked = false;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
@@ -13,6 +15,7 @@ public class MainMenu : MonoBehaviour
     public void Options()
     {
         SceneManager.LoadScene("Options");
+        optionsClicked = true;
     }
 
     public void Quit()
@@ -23,6 +26,11 @@ public class MainMenu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public static bool returnOptionsClicked()
+    {
+        return optionsClicked;
     }
 
 }

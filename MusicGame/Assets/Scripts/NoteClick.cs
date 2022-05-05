@@ -46,7 +46,7 @@ void Start()
 
         if(state == ButtonState.WAITING)
         {
-            personagem.transform.position = new Vector3(9.18f, -3.34f, 0);
+            personagem.transform.position = new Vector3(7.64f, -3.2f, 0);
         }
 
         if(points < 0)
@@ -58,7 +58,7 @@ void Start()
             if (state == ButtonState.WAITING)
             {
                 state = ButtonState.G;
-                personagem.transform.position = new Vector3(-4.4f, -3.34f, 0);
+                personagem.transform.position = new Vector3(-2.36f, -3.2f, 0);
                 buttons[0].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
                 gValue = true;
                 if (gColl == true)
@@ -81,7 +81,7 @@ void Start()
             if (state == ButtonState.WAITING)
             {
                 state = ButtonState.H;
-                personagem.transform.position = new Vector3(1.69f, -3.34f, 0);
+                personagem.transform.position = new Vector3(1.44f, -3.2f, 0);
                 buttons[1].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
                 hValue = true;
                 if (hColl == true)
@@ -104,7 +104,7 @@ void Start()
             if (state == ButtonState.WAITING)
             {
                 state = ButtonState.J;
-                personagem.transform.position = new Vector3(7.62f, -3.34f, 0);
+                personagem.transform.position = new Vector3(5.11f, -3.2f, 0);
                 buttons[2].GetComponent<Renderer>().material.SetColor("_Color", pressedNote);
                 jValue = true;
                 if (jColl == true)
